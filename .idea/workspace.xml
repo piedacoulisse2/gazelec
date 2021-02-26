@@ -14,6 +14,17 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -29,9 +40,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.home">
     <configuration name="gazelec" type="PythonConfigurationType" factoryName="Python">
       <module name="gazelec" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -54,6 +65,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="home" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gazelec" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/home.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.gazelec" />
+      <item itemvalue="Python.home" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.home" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -63,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614349677003</updated>
-      <workItem from="1614349678454" duration="1788000" />
+      <workItem from="1614349678454" duration="5759000" />
     </task>
     <servers />
   </component>
@@ -79,5 +121,28 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680/-1280.0.1280.680@0.0.1280.680" timestamp="1614349821099" />
+    <state width="1237" height="72" key="GridCell.Tab.0.bottom" timestamp="1614359362135">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.bottom/0.0.1280.680/-1280.0.1280.680@0.0.1280.680" timestamp="1614359362135" />
+    <state width="1237" height="72" key="GridCell.Tab.0.center" timestamp="1614359362135">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.center/0.0.1280.680/-1280.0.1280.680@0.0.1280.680" timestamp="1614359362135" />
+    <state width="1237" height="72" key="GridCell.Tab.0.left" timestamp="1614359362135">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.left/0.0.1280.680/-1280.0.1280.680@0.0.1280.680" timestamp="1614359362135" />
+    <state width="1237" height="72" key="GridCell.Tab.0.right" timestamp="1614359362135">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="72" key="GridCell.Tab.0.right/0.0.1280.680/-1280.0.1280.680@0.0.1280.680" timestamp="1614359362135" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1614359352870">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680/-1280.0.1280.680@0.0.1280.680" timestamp="1614359352870" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gazelec$home.coverage" NAME="home Coverage Results" MODIFIED="1614352520863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
