@@ -17,9 +17,26 @@ def importer_donnee():
     df['date'] = pd.to_datetime(df['Date'])
     df['horodate'] = pd.to_datetime(df['Date - Heure']) # This makes the function take 2s to run
 
+#graphique = df['horodate'] , df['Consommation brute électricité (MW) - RTE'], df['Consommation brute gaz totale (MW PCS 0°C)']
+
 importer_donnee()
 
 st.write(df)
+
+with st.echo(code_location='below'):
+    import plotly.express as px
+
+    fig = px.scatter(
+        x=df['horodate'],
+        y=df['Consommation brute électricité (MW) - RTE'],
+    )
+    fig.update_layout(
+        xaxis_title="horodate",
+        yaxis_title="Consommation électrique",
+    )
+
+    st.write(fig)
+
 
 
 
