@@ -7,9 +7,9 @@ import pandas as pd
 
 st.title('Application Elec gaz')
 
-adresse ='C:\\Users\\4799XA\\OneDrive\\CODE\\gazelec\\Donnees\\'
-nom ='consommation-quotidienne-brute.csv'
-lien = adresse + nom
+
+nom ='Donnees/consommation-quotidienne-brute.csv'
+lien = nom
 
 df = pd.read_csv(lien,sep=";")
 df['date'] = pd.to_datetime(df['Date'])
