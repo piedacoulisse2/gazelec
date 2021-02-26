@@ -5,9 +5,6 @@ import numpy as np
 import pandas as pd
 
 
-import seaborn as sns
-
-
 st.title('Application Elec gaz')
 
 adresse ='C:\\Users\\4799XA\\OneDrive\\CODE\\gazelec\\Donnees\\'
