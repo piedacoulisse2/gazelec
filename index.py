@@ -21,17 +21,30 @@ importer_donnee()
 
 #st.write(df)
 data = df['Consommation brute électricité (MW) - RTE']
-x = df['date']
 
-chart_data = pd.DataFrame(
-     df,
-     columns=['Consommation brute électricité (MW) - RTE'])
+x = df['Date']
 
-st.line_chart(chart_data)
+chart_data = pd.DataFrame(data=df['Consommation brute électricité (MW) - RTE'].values,index=df['Date'].values,columns=['Valeur électricité'])
+chart_data['valeurs gaz'] = df['Consommation brute gaz totale (MW PCS 0°C)'].values
+
+
+
+from bokeh.plotting import figure
+
+x = [1, 2, 3, 4, 5]
+y = [6, 7, 2, 4, 5]
+
 p = figure(
      title='simple line example',
      x_axis_label='x',
      y_axis_label='y')
-p.line(x, data, legend='Trend', line_width=2)
+
+p.line(x, y, legend='Trend', line_width=2)
+
 st.bokeh_chart(p, use_container_width=True)
+
+#st.line_chart(chart_data)
+
+
+
 
