@@ -26,16 +26,4 @@ y=df['Consommation brute électricité (MW) - RTE']
 
 data = df['Consommation brute électricité (MW) - RTE']
 
-st.write("Conso RTE", data.sort_index())
-
-chart = (
-    alt.Chart(data)
-    .mark_area(opacity=0.3)
-    .encode(
-        x="year:T",
-        y=alt.Y("Gross Agricultural Product ($B):Q", stack=None),
-        color="Region:N",
-    )
-)
-st.altair_chart(chart, use_container_width=True)
-
+st.line_chart(y=data,x=df['horodate'])
