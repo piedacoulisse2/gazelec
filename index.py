@@ -1,9 +1,7 @@
 import streamlit as st
-# To make things easier later, we're also importing numpy and pandas for
-# working with sample data.
 import numpy as np
 import pandas as pd
-
+import altair as alt
 
 st.title('Application Elec gaz')
 
@@ -11,7 +9,7 @@ nom = 'Donnees/consommation-quotidienne-brute.csv'
 lien = nom
 df = pd.read_csv(lien, sep=";")
 
-@st.cache  # 👈 Added this
+@st.cache
 def importer_donnee():
 
     df['date'] = pd.to_datetime(df['Date'])
@@ -23,20 +21,21 @@ importer_donnee()
 
 st.write(df)
 
-with st.echo(code_location='below'):
-    import plotly.express as px
+x=df['horodate']
+y=df['Consommation brute électricité (MW) - RTE']
 
-    fig = px.scatter(
-        x=df['horodate'],
-        y=df['Consommation brute électricité (MW) - RTE'],
+data = df['Consommation brute électricité (MW) - RTE']
+
+st.write("Conso RTE", data.sort_index())
+
+chart = (
+    alt.Chart(data)
+    .mark_area(opacity=0.3)
+    .encode(
+        x="year:T",
+        y=alt.Y("Gross Agricultural Product ($B):Q", stack=None),
+        color="Region:N",
     )
-    fig.update_layout(
-        xaxis_title="horodate",
-        yaxis_title="Consommation électrique",
-    )
-
-    st.write(fig)
-
-
-
+)
+st.altair_chart(chart, use_container_width=True)
 
