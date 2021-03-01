@@ -19,11 +19,8 @@ def importer_donnee():
 
 importer_donnee()
 
-st.write(df)
-
-x=df['horodate']
-y=df['Consommation brute électricité (MW) - RTE']
+#st.write(df)
 
 data = df['Consommation brute électricité (MW) - RTE']
 
-st.line_chart(y=data,x=df['horodate'])
+st.line_chart(y=data,x=df['date'])
