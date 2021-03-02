@@ -16,17 +16,14 @@ def importer_donnee():
     df['horodate'] = pd.to_datetime(df['Date - Heure']) # This makes the function take 2s to run
 
 #graphique = df['horodate'] , df['Consommation brute électricité (MW) - RTE'], df['Consommation brute gaz totale (MW PCS 0°C)']
-
-importer_donnee()
-
+#importer_donnee()
 #st.write(df)
-data = df['Consommation brute électricité (MW) - RTE']
+#data = df['Consommation brute électricité (MW) - RTE']
+#x = df['Date']
+#chart_data = pd.DataFrame(data=df['Consommation brute électricité (MW) - RTE'].values,index=df['Date'].values,columns=['Valeur électricité'])
+#chart_data['valeurs gaz'] = df['Consommation brute gaz totale (MW PCS 0°C)'].values
 
-x = df['Date']
-
-chart_data = pd.DataFrame(data=df['Consommation brute électricité (MW) - RTE'].values,index=df['Date'].values,columns=['Valeur électricité'])
-chart_data['valeurs gaz'] = df['Consommation brute gaz totale (MW PCS 0°C)'].values
-
+#st.line_chart(chart_data)
 
 
 from bokeh.plotting import figure
@@ -39,11 +36,10 @@ p = figure(
      x_axis_label='x',
      y_axis_label='y')
 
-p.line(x, y, legend='Trend', line_width=2)
+p.line(x, y)
 
-st.bokeh_chart(p, use_container_width=True)
+fig = st.bokeh_chart(p)
 
-#st.line_chart(chart_data)
 
 
 
